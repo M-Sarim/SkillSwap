@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-neutral-50 dark:bg-gray-900 text-neutral-800 dark:text-gray-200 transition-colors duration-200;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-semibold tracking-tight text-neutral-900 dark:text-white;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+
+  h4 {
+    @apply text-lg md:text-xl;
+  }
+
+  a {
+    @apply text-secondary-600 dark:text-secondary-400 hover:text-secondary-700 dark:hover:text-secondary-300 transition-colors duration-200;
+  }
+
+  p {
+    @apply leading-relaxed text-neutral-700 dark:text-gray-300;
+  }
+}
+
+@layer components {
+
+  /* Button Styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-2xl shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-150;
+  }
+
+  .btn-primary {
+    @apply bg-secondary-600 text-white hover:bg-secondary-700 focus:ring-secondary-500 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 shadow-md hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border border-neutral-200 bg-white text-neutral-700 hover:bg-neutral-50 hover:border-neutral-300 focus:ring-secondary-500;
+  }
+
+  .btn-text {
+    @apply text-secondary-600 hover:text-secondary-700 hover:bg-secondary-50 bg-transparent shadow-none;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3 text-base;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-2xl shadow-soft overflow-hidden border border-neutral-100 dark:border-gray-700;
+  }
+
+  .card-hover {
+    @apply transition-all duration-150 hover:shadow-soft-lg hover:-translate-y-0.5;
+  }
+
+  /* Form Styles */
+  .form-input {
+    @apply block w-full rounded-xl border-neutral-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm focus:border-secondary-500 focus:ring-secondary-500 dark:text-white sm:text-sm transition-colors duration-200;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-neutral-700 dark:text-gray-300 mb-1.5;
+  }
+
+  .form-error {
+    @apply mt-1.5 text-sm text-red-600 dark:text-red-400 font-medium;
+  }
+
+  .form-hint {
+    @apply mt-1.5 text-sm text-neutral-500 dark:text-gray-400;
+  }
+
+  /* Badge Styles */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply bg-green-50 text-green-700 ring-1 ring-inset ring-green-600/20;
+  }
+
+  .badge-warning {
+    @apply bg-yellow-50 text-yellow-700 ring-1 ring-inset ring-yellow-600/20;
+  }
+
+  .badge-danger {
+    @apply bg-red-50 text-red-700 ring-1 ring-inset ring-red-600/20;
+  }
+
+  .badge-info {
+    @apply bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-600/20;
+  }
+
+  .badge-purple {
+    @apply bg-secondary-50 text-secondary-700 ring-1 ring-inset ring-secondary-600/20;
+  }
+
+  /* Section Styles */
+  .section {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .container-narrow {
+    @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Divider */
+  .divider {
+    @apply h-px w-full bg-neutral-200 my-6;
+  }
+
+  /* Avatar */
+  .avatar {
+    @apply rounded-full object-cover;
+  }
+
+  .avatar-sm {
+    @apply h-8 w-8;
+  }
+
+  .avatar-md {
+    @apply h-12 w-12;
+  }
+
+  .avatar-lg {
+    @apply h-16 w-16;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100 dark:bg-gray-800 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-300 dark:bg-gray-600 rounded-full hover:bg-neutral-400 dark:hover:bg-gray-500 transition-colors duration-200;
+}
